@@ -5,6 +5,10 @@ const styles = StyleSheet.create({
   separator: {
     height: 10,
   },
+  flexContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
 });
 
 const repositories = [
@@ -63,6 +67,7 @@ const RepositoryList = () => {
       ItemSeparatorComponent={ItemSeparator}
       renderItem={RepositoryItem}
       keyExtractor={(item) => item.id}
+      style={styles.flexContainer}
     />
   );
 };
